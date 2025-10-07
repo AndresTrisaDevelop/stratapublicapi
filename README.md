@@ -4,59 +4,59 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.103.2-green.svg)
 ![Pydantic](https://img.shields.io/badge/Pydantic-2.4.2-orange.svg)
 
-API para la gestión de información transaccional en la industria del mueble (furniture), construida con FastAPI.
+API for managing transactional information in the furniture industry, built with FastAPI.
 
-## Descripción
+## Description
 
-**Strata Public API** proporciona una interfaz RESTful para gestionar las operaciones de contabilidad, incluyendo Cuentas por Pagar (Accounts Payable) y Cuentas por Cobrar (Accounts Receivable). Permite la creación, lectura, actualización y eliminación de diversas entidades transaccionales y de datos maestros, como órdenes de compra, facturas, clientes, proveedores y más.
+**Strata Public API** provides a RESTful interface for managing accounting operations, including Accounts Payable (AP) and Accounts Receivable (AR). It enables the creation, reading, updating, and deletion of various transactional entities and master data, such as purchase orders, invoices, customers, suppliers, and more.
 
-La API está diseñada para ser robusta, fácil de usar y auto-documentada gracias a las características de FastAPI y Pydantic.
+The API is designed to be robust, user-friendly, and self-documented thanks to the features of FastAPI and Pydantic.
 
-## Características
+## Features
 
-- **Framework Moderno**: Construido sobre **FastAPI** para un alto rendimiento.
-- **Validación de Datos**: Utiliza **Pydantic** para una validación de datos robusta y una serialización clara.
-- **Documentación Automática**: Genera automáticamente documentación interactiva con **Swagger UI** (`/docs`) y **ReDoc** (`/redoc`).
-- **Estructura Modular**: Organizada en routers para una clara separación de responsabilidades (AP, AR, Datos Maestros, Configuración).
-- **Operaciones CRUD Completas**: Endpoints para `GET`, `POST`, `PATCH`, y `DELETE` para todas las entidades principales.
+- **Modern Framework**: Built on **FastAPI** for high performance.
+- **Data Validation**: Uses **Pydantic** for robust data validation and clear serialization.
+- **Automatic Documentation**: Automatically generates interactive documentation with **Swagger UI** (`/docs`) and **ReDoc** (`/redoc`).
+- **Modular Structure**: Organized into routers for clear separation of responsibilities (AP, AR, Master Data, Configuration).
+- **Complete CRUD Operations**: Endpoints for `GET`, `POST`, `PATCH`, and `DELETE` for all main entities.
 
 ---
 
-## Instalación y Configuración
+## Installation and Setup
 
-Sigue estos pasos para poner en marcha el servidor de desarrollo local.
+Follow these steps to set up the local development server.
 
-### Prerrequisitos
+### Prerequisites
 
 - Python 3.9+
-- `pip` (gestor de paquetes de Python)
+- `pip` (Python package manager)
 
-### 1. Clonar el Repositorio (Opcional)
+### 1. Clone the Repository (Optional)
 
-Si estás trabajando desde un repositorio Git, clónalo. De lo contrario, asegúrate de estar en el directorio raíz del proyecto.
+If you're working from a Git repository, clone it. Otherwise, make sure you're in the project's root directory.
 
 ```bash
-git clone <url-del-repositorio>
+git clone <repository-url>
 cd Strata_Public_API
 ```
 
-### 2. Crear y Activar un Entorno Virtual
+### 2. Create and Activate a Virtual Environment
 
-Es una buena práctica aislar las dependencias del proyecto.
+It's good practice to isolate project dependencies.
 
 ```bash
-# Para Windows
+# For Windows
 python -m venv venv
 .\venv\Scripts\activate
 
-# Para macOS/Linux
+# For macOS/Linux
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 3. Instalar Dependencias
+### 3. Install Dependencies
 
-Instala todos los paquetes necesarios desde el archivo `requirements.txt`.
+Install all necessary packages from the `requirements.txt` file.
 
 ```bash
 pip install -r requirements.txt
@@ -64,33 +64,33 @@ pip install -r requirements.txt
 
 ---
 
-## Cómo Ejecutar la Aplicación
+## How to Run the Application
 
-Una vez que la configuración esté completa, puedes iniciar el servidor de desarrollo con Uvicorn.
+Once setup is complete, you can start the development server with Uvicorn.
 
 ```bash
 uvicorn app.main:app --reload
 ```
 
-- `app.main:app`: Le dice a Uvicorn que busque el objeto `app` en el archivo `app/main.py`.
-- `--reload`: Reinicia el servidor automáticamente cada vez que se detecta un cambio en el código.
+- `app.main:app`: Tells Uvicorn to look for the `app` object in the `app/main.py` file.
+- `--reload`: Automatically restarts the server whenever a code change is detected.
 
-El servidor estará disponible en `http://127.0.0.1:8000`.
+The server will be available at `http://127.0.0.1:8000`.
 
 ---
 
-## Explorar la API
+## Explore the API
 
-Una vez que el servidor esté en funcionamiento, puedes acceder a la documentación interactiva de la API desde tu navegador:
+Once the server is running, you can access the interactive API documentation from your browser:
 
 - **Swagger UI**: http://127.0.0.1:8000/docs
 - **ReDoc**: http://127.0.0.1:8000/redoc
 
-Desde la interfaz de Swagger, puedes explorar todos los endpoints, ver los esquemas de datos y probar la API directamente.
+From the Swagger interface, you can explore all endpoints, view data schemas, and test the API directly.
 
 ---
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 strata_public_api/
