@@ -97,16 +97,16 @@ strata_public_api/
 |-- venv/
 |-- app/
 |   |-- __init__.py
-|   |-- main.py             # Punto de entrada de la aplicación
-|   |-- routers/            # Módulos de endpoints
+|   |-- main.py             # Application entry point
+|   |-- routers/            # Endpoint modules
 |   |   |-- accounts_payable.py
 |   |   |-- accounts_receivable.py
 |   |   |-- catalogs.py
 |   |   |-- configuration.py
-|   |   |-- ... (y otros routers)
-|   `-- schemas/            # Modelos de datos Pydantic
+|   |   |-- ... (and other routers)
+|   `-- schemas/            # Pydantic data models
 |       |-- purchase_order.py
 |       |-- bill.py
-|       |-- ... (y otros esquemas)
-`-- requirements.txt        # Dependencias del proyecto
+|       |-- ... (and other schemas)
+`-- requirements.txt        # Project dependencies
 ```
